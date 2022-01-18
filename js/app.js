@@ -39,6 +39,7 @@ $(function () {
 
     setInterval(timeCounter, 1000);
 
+    // Reviews slider
     $(function () {
         $('.reviews__items').slick({
             arrows: false,
@@ -62,18 +63,7 @@ $(function () {
     });
 
 
-    $(".anchor").on("click", function (event) {
-        event.preventDefault();
-
-        let elementId = $(this).attr('href');
-        let elementOffset = $(elementId).offset().top;
-
-        $("html, body").animate({
-            scrollTop: elementOffset - 80
-        }, 700);
-    });
-
-
+    // Burger
     const navList = $('.nav__list'),
         navBtn = $('.nav__btn');
 
@@ -87,5 +77,21 @@ $(function () {
             navBtn.removeClass('active');
             navList.removeClass('active');
         }
+    });
+
+
+    // Smooth scroll
+    $(".anchor").on("click", function (event) {
+        event.preventDefault();
+
+        let elementId = $(this).attr('href');
+        let elementOffset = $(elementId).offset().top;
+
+        $("html, body").animate({
+            scrollTop: elementOffset - 82
+        }, 700);
+
+        navList.removeClass('active');
+        navBtn.removeClass('active');
     });
 });
