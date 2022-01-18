@@ -349,11 +349,6 @@ body {
         overflow: hidden;
     }
 
-    .header {
-        width: 100%;
-        position: relative;
-        z-index: 999;
-    }
     .nav__btn {
         display: block;
     }
